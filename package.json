@@ -1,0 +1,33 @@
+{
+  "name": "kpi",
+  "version": "1.0.0",
+  "description": "this is kpi project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx eslint .\\",
+    "start": "",
+    "lint": "",
+    "deploy": "",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olesyamogil/kpi.git"
+  },
+  "keywords": [
+    "kpi"
+  ],
+  "author": "lavro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olesyamogil/kpi/issues"
+  },
+  "homepage": "https://github.com/olesyamogil/kpi#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0"
+  }
+}
