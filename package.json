@@ -4,7 +4,7 @@
   "description": "this is kpi project",
   "main": "index.js",
   "scripts": {
-    "test": "npx eslint .\\",
+    "test": "./node_modules/.bin/eslint eslint ./",
     "start": "",
     "lint": "",
     "deploy": "",
