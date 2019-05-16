@@ -1,3 +1,8 @@
 language: node_js
 node_js:
-  - "7"
+  - "10"
+cache: npm
+
+before_install: npm ci
+script: npm run lint
+after_script: npm run deploy
