@@ -4,8 +4,8 @@
   "description": "this is kpi project",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore ."
-
+    "lint": "eslint --ignore-path .gitignore .",
+    "deploy": "now"
   },
   "repository": {
     "type": "git",
