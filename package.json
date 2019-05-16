@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
-    "deploy": "now"
+    "deploy": "now --token baau31jPodDMKiip8vCXJsbd"
   },
   "repository": {
     "type": "git",
