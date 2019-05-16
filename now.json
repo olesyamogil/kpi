@@ -1,0 +1,9 @@
+{
+  "name": "zeit-kpi",
+  "version": 1,
+  "alias": ["my-domain.com"],
+  "builds": [
+    { "src": "*.html", "use": "@now/static" },
+    { "src": "*.js", "use": "@now/node" }
+  ]
+}
