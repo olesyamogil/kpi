@@ -2,24 +2,30 @@
     res.end(`Hello from Node.js on Now 2.0!`);
 };*/
 
-var TelegramBot = require('node-telegram-bot-api');
+const TelegramBot = require('node-telegram-bot-api');
+const token = '868060908:AAExL4mV3gfQGD-Lnukk0TV43rmtuBduxUs';
 
-// Устанавливаем токен, который выдавал нам бот.
-var token = '868060908:AAExL4mV3gfQGD-Lnukk0TV43rmtuBduxUs';
-// Включить опрос сервера
-var bot = new TelegramBot(token, {polling: true});
+// Create a bot that uses 'polling' to fetch new updates
+const bot = new TelegramBot(token, {polling: true});
 
-// Написать мне ... (/echo Hello World! - пришлет сообщение с этим приветствием.)
-bot.onText(//echo (.+)/, function (msg, match) {
-var fromId = msg.from.id;
-var resp = match[1];
-bot.sendMessage(fromId, resp);
+// Matches "/echo [whatever]"
+bot.onText(/\/echo (.+)/, (msg, match) => {
+    // 'msg' is the received Message from Telegram
+    // 'match' is the result of executing the regexp above on the text content
+    // of the message
+
+    const chatId = msg.chat.id;
+    const resp = match[1]; // the captured "whatever"
+
+    // send back the matched "whatever" to the chat
+    bot.sendMessage(chatId, resp);
 });
 
-// Простая команда без параметров.
-bot.on('message', function (msg) {
-    var chatId = msg.chat.id;
-    // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
-    var photo = 'oo.png';
-    bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
+// Listen for any kind of message. There are different kinds of
+// messages.
+bot.on('message', (msg) => {
+    const chatId = msg.chat.id;
+
+    // send a message to the chat acknowledging receipt of their message
+    bot.sendMessage(chatId, 'Received your message');
 });
