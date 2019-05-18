@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
-    "deploy": "now alias --token baau31jPodDMKiip8vCXJsbd $(now --token baau31jPodDMKiip8vCXJsbd --name \"kpi-$TRAVIS_BRANCH\") \"kpi-$TRAVIS_BRANCH\""
+    "deploy": "now alias --token baau31jPodDMKiip8vCXJsbd $(now --token baau31jPodDMKiip8vCXJsbd --name \"master\") \"master\""
   },
   "repository": {
     "type": "git",
