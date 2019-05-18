@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "node_js",
+  "name": "kpi",
   "builds": [
     { "src": "*.js", "use": "@now/node" }
   ]
