@@ -4,6 +4,7 @@
   "description": "this is kpi project",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "lint": "eslint --ignore-path .gitignore .",
     "deploy": "now alias --token baau31jPodDMKiip8vCXJsbd $(now --token baau31jPodDMKiip8vCXJsbd --name \"kpi-$TRAVIS_BRANCH\") \"kpi-$TRAVIS_BRANCH\""
   },
@@ -20,6 +21,9 @@
     "url": "https://github.com/olesyamogil/kpi/issues"
   },
   "homepage": "https://github.com/olesyamogil/kpi#readme",
+  "engines": {
+    "node": "10.13.0"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -28,5 +32,12 @@
     "eslint-plugin-react": "^7.13.0",
     "now": "^15.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jsdom": "^15.1.0",
+    "moment": "^2.24.0",
+    "node-telegram-bot-api": "^0.30.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  }
 }
