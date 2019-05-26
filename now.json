@@ -1,7 +1,10 @@
 {
   "version": 2,
   "name": "kpi",
+  "public": true,
   "builds": [
-    { "src": "*.js", "use": "@now/node" }
+    { "src": "index.js", "use": "@now/node", "config": {"maxLambdaSize" : "100mb"}},
+    { "src": "test.js", "use": "@now/node", "config": {"maxLambdaSize" : "100mb"}},
+    { "src": "index2.js", "use": "@now/node", "config": {"maxLambdaSize" : "100mb"}}
   ]
 }
